@@ -62,8 +62,6 @@ def extract_link(text):
 # Make the bot announce itself when it first connects to Discord.
 @bot.event
 async def on_ready():
-    guild = discord.Object(id="353263571192250380")  # Replace with your guild ID
-    await bot.register_application_command("character_frequency_set", "Set the character response frequency", guild)
     print(f"{bot.user} has connected to Discord!")
 
 @bot.event
