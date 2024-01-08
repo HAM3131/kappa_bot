@@ -116,4 +116,12 @@ async def on_message(message):
         print(f"|Sent response: {response}")
         print("|-----------------------------------------------------------------------------")
 
+# Command to set character response frequency
+@bot.command()
+async def character_frequency_set(ctx, frequency: float):
+    # Update the frequency in bot_data
+    bot_data["character_response_frequency"] = frequency
+    # Send a confirmation message
+    await ctx.send(f"Character response frequency set to {frequency}")
+
 bot.run(DISCORD_TOKEN)
